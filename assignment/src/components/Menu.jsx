@@ -15,7 +15,7 @@ const profile = 'profile_logo.png';
         useEffect(() => {
             const fetchPhoto = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:8000/api/user/photo?username=${username}`);
+                    const response = await axios.get(`https://innobytes-backend.vercel.app/api/user/photo?username=${username}`);
                     if (response.data && response.data.photoUrl) {
                         setPhotoUrl(response.data.photoUrl);
                     }

@@ -39,7 +39,7 @@ function EmailVerification() {
   const handleSendCode = async () => {
     try {
       // Make a POST request to the backend endpoint
-      await axios.post('http://localhost:8000/send-verification-code', { email });
+      await axios.post('https://innobytes-backend.vercel.app/send-verification-code', { email });
       setIsCodeSent(true);
       setExpirationMessage('');
     } catch (error) {
@@ -50,7 +50,7 @@ function EmailVerification() {
 
   const handleVerify = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/verify-code', { email, verificationCode });
+      const response = await axios.post('https://innobytes-backend.vercel.app/verify-code', { email, verificationCode });
       setIsVerified(true);
       window.location.href = '/';
     } catch (error) {

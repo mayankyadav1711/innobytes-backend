@@ -1,5 +1,5 @@
 import axios from "axios";
-const URL = 'https://innobytes-full-stack.vercel.app/';
+const URL = 'https://innobytes-backend.vercel.app/';
 
 export const addUser = async (data) =>{
     try{
