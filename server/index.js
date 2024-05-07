@@ -102,7 +102,7 @@ app.post('/send-verification-code', async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'shiladityamukherjee5486@gmail.com',
-        pass: 'lcat mzqi myew kbla',
+        pass: 'lcatmzqimyewkbla',
       },
       debug: true,
     });
