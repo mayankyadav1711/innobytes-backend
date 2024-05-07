@@ -25,16 +25,15 @@ app.use(session({
 const PORT = 8000;
 dotenv.config()
 
-const corsConfig = {
+app.use(cors({
   origin: [
-    "https://innobytes-frontend.vercel.app/",
+    "https://innobytes-frontend.vercel.app",
+ 
   ],
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
-}
-app.use(cors(corsConfig))
-app.options("", cors(corsConfig))
-
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+ 
 
 
 app.use(bodyParser.json({extended : true}))
